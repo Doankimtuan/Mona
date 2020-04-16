@@ -24,10 +24,12 @@
                     {{$products->description}}
                 </p>
             </div>
-            <div class="number">  
-                    <input type="number" id="qty" value="1" style="width: 80px; height:40px; font-size: 30px">
+            <form action="{{URL::to('/save-cart')}}" method="POST" class="number">  
+                {{csrf_field()}}
+                    <input type="number" name="qty" id="qty" value="1" style="width: 80px; height:40px; font-size: 30px">
+                    <input type="productid_hidden" type="hidden" value="{{$products->id}}" style="display:none">
                 <input class="add" type="submit" value="THÊM VÀO GIỎ " style="color: white;">
-            </div>
+            </form>
 
             <div class="row-delivery">
                 <div class="row-3">
