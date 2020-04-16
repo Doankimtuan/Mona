@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Bill;
+use App\BillDetail;
+
 use DB;
 use App\Cart;
+use App\Customers;
 use App\Product;
+use Illuminate\Http\Request;
 use Session;
 
 class HomeController extends Controller
@@ -37,7 +41,7 @@ class HomeController extends Controller
 
     public function getStore()
     {
-        $products = DB::table('products')->limit('100')->get();
+        $products = DB::table('products')->paginate(9);
         return view('page.store', compact('products'));
     }
 
@@ -81,7 +85,62 @@ class HomeController extends Controller
         return view('page.cart', compact('cart'));
     }
 
-    public function checkOut() {
+    public function getCheckOut() {
         return view('page.checkout');
+    }
+
+
+    public function postCheckOut(Request $req)       // lay data tu form roi luu
+    	{
+           
+  	    	$cart = Session::get('Cart');
+           	$cus = new Customers();
+         	$cus->name = $req->name;
+        	$cus->email = $req->email;
+        	$cus->address = $req->address;
+        	$cus->phone_number = $req->phone_number;
+        	$cus->note = $req->note;
+        	$cus->save();
+
+        	$bill = new Bill();
+        	$bill->id_custommer = $cus->id;
+        	$bill->date_order = date('Y-m-d');
+        	$bill->total = $cart->totalPrice;
+        	$bill->payment = $req->pay;
+            $bill->save();
+
+        	foreach ($cart->products as $item) {
+                # code...
+            		$billdetail = new BillDetail();
+           		    $billdetail->id_bill = $bill->id;
+            		$billdetail->id_product = $item['productInfo']->id;
+            		$billdetail->quantily = $item['qty'];
+            		$billdetail->unit_price = $item['productInfo']->price;
+            		$billdetail->save();
+       		}
+
+            Session::forget('Cart');
+              
+      		return redirect()->back()->with('thongbao', 'Dat hang thanh cong');
+    	}
+
+
+
+
+
+    public function search(Request $req) {
+        $products = DB::table('products')->where('name', 'like','%'.$req->key.'%')->get();
+        return view('page.store', compact('products'));
+    }
+
+    public function save_cart(Request $req) {
+        $productID = $req->productid_hidden;
+        $qty = $req->qty;
+
+        // $data = DB::table('products')->where('id', $productID)->first();
+
+        echo '<pre>';
+        print_r($productID);
+        echo '<pre>';
     }
 }

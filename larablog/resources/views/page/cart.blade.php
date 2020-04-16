@@ -27,6 +27,12 @@
       class="cart-total-value"> {{number_format($cart->totalPrice)}}đ</span></div>
   <div class="clearfix"></div>
 
+  <div class="center">
+                                <div class="space10">&nbsp;</div>
+                                <a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i
+                                        class="fa fa-chevron-right"></i></a>
+                                {{-- {{URL::to('/thanh-toan')}} --}}
+                            </div>
   @endif
 
   {{-- {{URL::to('public/source/img/'.$item['item']->image)}} --}}

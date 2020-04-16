@@ -39,6 +39,9 @@
         #beta-dropdown {
             display: none;
         }
+        .lala:hover #beta-dropdown .center{
+            display: block;
+        }
 
         .lala:hover #beta-dropdown {
             display: block;
@@ -59,6 +62,12 @@
         .socail_login i {
             width: 20px;
             height: auto;
+        }
+
+        .pagination li{
+            display: inline-block;
+            padding: 1rem;
+            font-size: 1rem;
         }
     </style>
 
@@ -158,12 +167,12 @@
                             {{-- close cart-caption  --}}
                             <div class="center">
                                 <div class="space10">&nbsp;</div>
-                                <a href="{{URL::to('/thanh-toan')}}" class="beta-btn primary text-center">Đặt hàng <i
+                                <a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i
                                         class="fa fa-chevron-right"></i></a>
                                 {{-- {{URL::to('/thanh-toan')}} --}}
                             </div>
                         </div>
-
+                        
                     </div>
                 </li>
             </ul>
@@ -176,8 +185,9 @@
     @yield('store')
     @yield('knowledge')
     @yield('productDetail')
+    @yield('checkout')
    
-
+    @include('page.search')
 
     <!-- Footter -->
 
