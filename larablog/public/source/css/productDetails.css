@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", sans-serif;
+}
+
+/* --------------------- SECTION-1 -------------------- */
+.section-detail h1, .section-detail h2, .section-detail h3, .section-detail h4, .section-detail p,
+.section-detail2 h1, .section-detail2 h2, .section-detail2 h3, .section-detail2 h4, .section-detail2 p,
+.section-detail3 h1, .section-detail3 h2, .section-detail3 h3, .section-detail3 h4, .section-detail3 p{
+    color: var(--text-black);
+}
+
+
+.section-detail .row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.section-detail .row .row-1 img{
+    width: 100%;
+
+}
+
+.section-detail .row .row-2 .link{
+    display: flex;
+    margin: 0;
+}
+
+.section-detail .row .row-2 .link a{
+    text-decoration: none;
+    font-size: 100%;
+    color: grey;
+}
+
+.section-detail .row .row-2 .link a:hover{
+    color: black;
+}
+.section-detail .row  span{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: grey;
+}
+
+.section-detail .row .row-2 h2{
+    color: var(--text-green);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-detail h1{
+    font-size: 200%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.section-detail .row .row-2 .number{
+    font-size: 100%;
+    margin-top: 70px;
+}
+
+.section-detail .row .row-2 .number .dau{
+    font-size: 150%;
+    margin: 0;
+    padding: 1px;
+}
+.section-detail .row .row-2 .number .add{
+    background-color: #d26e4b;
+    padding: 10px;
+    font-size: 120%;
+}
+
+.section-detail .row .row-2 .row-delivery{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section-detail .row .row-2 .row-delivery .row-3 .ship{
+    display: grid ;
+    grid-template-columns: auto auto auto;
+}
+.section-detail .row .row-2 .row-delivery .row-3 .ship .grid-item{
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.section-detail .row .row-2 .end-setion1 .btn-1{
+    background-color:var(--text-green);
+    padding: 10px;
+    font-size: 110%;
+    margin-top: 20px;
+}
+.section-detail .row .row-2 .end-setion1 .danh-muc{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.section-detail .row .row-2 .end-setion1 .danh-muc a{
+    text-decoration: none;
+    color: black;
+    font-size: 80%;
+    margin-left: 5px;
+}
+.section-detail .row .row-2 .end-setion1 .danh-muc a:hover{
+    color: rgb(158, 255, 47); 
+}
+
+/* --------------------- SECTION-2 -------------------- */
+.section-detail2{
+    margin-bottom: 80px;
+}
+.section-detail2 .review .btn-2{
+    background-color: #eee;
+    color: grey; 
+    font-size: 120%;
+    padding: 10px;
+    font-weight: 300;
+    
+}
+
+.section-detail2 .review :hover{
+    background-color: var(--text-green);
+}
+
+
+
+/* --------------------- SECTION-3 -------------------- */
+.section-detail3 h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section-detail3 .row-5{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;  
+}
+.section-detail3 .row-5 .grid-fruit{
+    border: 1px solid grey;
+    column-gap: 20px;
+    text-align: center;
+}
+.section-detail3 .row-5 .grid-fruit a{
+    text-decoration: none;
+    color: black;
+}
+.section-detail3 .row-5 .grid-fruit a:hover{
+    color: greenyellow;
+}
+.section-detail3 .row-5 .grid-fruit 
+h5{
+    color: greenyellow;
+    font-size: 15px;
+    font-weight: 1000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

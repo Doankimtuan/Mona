@@ -1,0 +1,148 @@
+
+
+/* --------------------- Knowledge -------------------- */
+
+.knowledge {
+    max-width: 1240px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.knowledge .title {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.knowledge .wrapper {
+    display: grid;
+    grid-template-columns: 300px 900px;
+    grid-gap: 10px ;
+}
+
+.knowledge .wrapper .list-news {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    padding: 20px; 
+
+}
+
+.knowledge .wrapper .list-news>.item-new>div>a>img {
+    border: 1px beige;
+    border-radius: 8px;
+    transition: all 1s ease;
+    padding: 0;
+}
+.knowledge .wrapper .list-news .item-new div:nth-child(1) {
+    overflow: hidden;
+    width: 278px;
+    height: 230px;
+}
+.knowledge .wrapper .list-news>.item-new div:nth-child(1){
+    border: 1px beige;
+    border-radius: 8px;
+}
+
+.knowledge .wrapper .list-news>.item-new>div>a>img:hover {
+    transform: scale(1.1);
+}
+.knowledge .wrapper .list-news .item-new .img-news {
+    width: 277px;
+    height: 155px;
+    margin: 0 0;
+}
+/* ----------X---------- Knowledge ----------X--------- */
+
+
+
+
+.knowledge .wrapper .menu-left{
+    overflow: hidden;
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.knowledge .wrapper .menu-left input#search{
+    width: 250px;
+    height: 50px;
+    background: #86ba09;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.knowledge .wrapper .menu-left button.icon{
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+    border: none;
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    color: #4f5b66;
+    opacity: 0;
+    font-size: 10pt;
+   
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+.knowledge .wrapper .menu-left:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -95px;
+}
+.knowledge .wrapper .menu-left:hover button.icon:hover{
+    background: white;
+} 
+.knowledge .wrapper .menu-left .table{
+    overflow: hidden;
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    border: solid 1px lightgray;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 0px;
+    margin-top: 50px;
+    background: #86ba09;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500px;
+    font-size: 20pt;
+    padding-left: 40px;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.knowledge .wrapper .menu-left .product{
+    overflow: hidden;
+    width: 250px;
+    height:60px;
+    line-height: 50px;
+    border: solid 2px lightgray;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 0px;
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 10px;
+    font-size: 11pt;
+    padding-left: 15px;
+    color: #000000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

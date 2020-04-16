@@ -1,0 +1,85 @@
+
+/* --------------------- SECTION-1 -------------------- */
+/* .section-1{
+    display: grid;
+} */
+.row{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+.gachchan :after{
+    content: " ";
+    display: block;
+    background-color: rgb(231, 226, 226);
+    height: 3px;
+    width: 53%;
+}
+.out-up{
+    margin-bottom: -50px;
+}
+.up{
+    margin-left: 1.5%;
+}
+.up a{
+    text-decoration: none;
+    color: black;
+}
+.up a:hover
+{
+    color: yellowgreen;
+}
+.row-1{
+    margin-top: 10px;
+}
+.row-2{
+
+}
+
+.row-1 .name{
+    display: inline-block;
+}
+.outline-name{
+    width: 315px;
+    opacity: 0.6;
+    font-size: 105%;
+}
+.outline{
+    color: grey;
+    width: 100%;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 110%;
+}
+.select{
+    width: 100%;
+    font-size: larger;
+}
+h4{
+    margin-left:-1%;
+}
+.outline-row-2{
+    border:2px solid yellowgreen; 
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+p{
+    color: yellowgreen;
+    font-weight: 600;
+}
+
+.dat-hang{
+    background-color: coral;
+    color: white;
+    font-size: 120%;
+    width: 130px;
+}
+.ghi-chu{
+    font-size: 100%;
+    width: 100%;
+    height: 110px;
+}
+

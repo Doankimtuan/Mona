@@ -1,0 +1,183 @@
+
+:root {
+    --text-gray: rgba(102, 102, 102, 0.85);
+    --text-green: #86ba09;
+    --text-black: #121212;
+}
+
+.section-1{
+    background-image:  url(../img/hinh-nen-trai-cay-dep-7.jpg);
+    height: 150px;
+    opacity: 0.9;
+    background-size: cover;
+    text-align: center;
+}
+
+.title-content{
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: 1000;
+    font-size: 150%;
+}
+.title-content a{
+    text-decoration: none;
+    color: #f1f1f1;
+
+}
+
+.section-1 h1{
+    font-size: 250%;
+    line-height: 100px;
+}
+
+
+.section-1 h2{
+    font-size: 350%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+/* --------------------- SECTION-2 -------------------- */
+.section-2 {
+    text-align: center;
+}
+.section-2 .text{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.section-2 .text h2, .section-2 .text p{
+    color: var(--text-black);
+}
+
+.section-2 .row{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    height: 650px;
+}
+
+.section-2 .row .row-1 .image .size-img{
+    width: 85px;
+    height: 100px;
+}
+.section-2 .row .row-1 .image{
+    text-align: center;
+}
+.section-2 .row .row-1 .image .text-image{
+    text-align: center;
+    padding:  30px  ;
+}
+
+.text-image h3{
+    color: var(--text-black);
+}
+
+.text-image p{
+    color: var(--text-black);
+    margin-top: -10px;
+    opacity: 0.9;
+}
+
+.ly{
+    width: 70%;
+    margin: 20% 15%;
+}
+/* --------------------- SECTION-3 -------------------- */
+.section-3{
+    margin-top: 20px;
+    background-image: url(../img/backgroud-section3.jpg);
+    background-size: cover;
+    height: 400px;  
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.section-3 .container {
+    position: absolute;
+    width: 100%;
+}
+.section-3 .container .text-3 h1{
+    color: black;
+    font-size: 30px;
+}
+.section-3 .container .text-3 p{
+    font-size: 120%;
+}
+.section-3 .container .text-enter{
+    margin-top: 13%;
+    text-align: center;
+    height: 50px;
+}
+.section-3 .container .text-enter .enter{
+    border-radius: 20px;
+    padding: 18px 30px;
+    width: 30%;
+    outline: 0;
+}
+
+.section-3 .container .text-enter button{
+    border-radius: 20px ;
+    padding: 15px 30px;
+    background-color: #86ba09;
+    color: white;
+    font-weight: 800;
+    margin: 0 auto;
+    outline: 0;
+}
+/* --------------------- SECTION-4 -------------------- */
+.section-4 .row-second{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    height: 300px;
+    margin-left: 50px;
+}
+
+.section-4 .row-second .logo-footer{
+    cursor: pointer;   
+    height: 60px;
+    margin-left: 60px;
+}
+
+.section-4 .row-second h3{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 140%;
+}
+
+.section-4 .row-second .link ul{
+    line-height: 30px; 
+    list-style: none;
+}
+.section-4 .row-second .link a{
+    color:gray;
+    font-size: 90%;
+}
+
+.section-4 .row-second .link a:hover{
+    color: #86ba09;
+}
+.section-4 .row-second .icon-footer{
+    color: gray;
+}
+
+.section-4 .row-second .icon-footer i{
+    color: #86ba09;
+}
+.section-4 .row-second .icon-footer ul{
+    list-style: none;
+    margin-left: 10%;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.section-4 .row-second .icon-footer a{
+    color: gray;
+    margin-left: 10px;
+}
+
+.section-4 .row-second .icon-footer a:hover{
+    color: #86ba09
+}
+/* --------------------- END -------------------- */

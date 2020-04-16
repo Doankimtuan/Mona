@@ -1,0 +1,130 @@
+
+
+:root {
+    --text-gray: rgba(102, 102, 102, 0.85);
+    --text-green: #86ba09;
+}
+/* --------------------- SECTION-1 -------------------- */
+
+.section-checkout {
+    margin: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.section-checkout h4,.section-checkout h1{
+    color: var(--text-black);
+}
+
+.section-checkout h1{
+    padding: 10px;
+}
+
+.section-checkout .row{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 10px;
+
+}
+
+.section-checkout .out-up{
+    margin-bottom: -50px;
+    padding: 10px;
+}
+
+.section-checkout .out-up .gachchan :after{
+    content: " ";
+    display: block;
+    background-color: rgb(231, 226, 226);
+    height: 3px;
+    width: 53%;
+}
+
+.section-checkout .out-up .up{
+    margin-left: 1.5%;
+    padding: 10px;
+}
+
+.section-checkout .out-up .up a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+.section-checkout .out-up .up a:hover
+{
+    color: var(--text-green);
+    padding: 10px;
+}
+.section-checkout .row .row-1{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.section-checkout .row .row-1 .name{
+    display: inline-block;
+    padding: 10px;
+}
+
+
+.section-checkout .row .row-1 .name .outline-name{
+    width: 315px;
+    opacity: 0.6;
+    font-size: 105%;
+    padding: 10px;
+}
+.section-checkout .row .row-1 .outline{
+    color: grey;
+    width: 100%;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 110%;
+    padding: 10px;
+}
+.section-checkout .row .row-1 .select{
+    width: 100%;
+    font-size: larger;
+    padding: 10px;
+}
+.section-checkout .row .row-1 h4{
+    margin-left:-1%;
+    padding: 10px;
+}
+
+.section-checkout .row .row-1 .end-checkout h4{
+    padding: 10px;
+}
+.section-checkout .row .row-1 .end-checkout .ghi-chu{
+    font-size: 100%;
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+}
+
+.section-checkout .outline-row-2{
+    border:2px solid var(--text-green); 
+    padding: 10px;
+}
+.section-checkout .outline-row-2 .text-header .left{
+    text-align: left;
+    padding: 10px;
+}
+.section-checkout .outline-row-2 .text-header .right{
+    text-align: right;
+    padding: 10px;
+}
+.section-checkout .outline-row-2 .text-header .right p{
+    color: var(--text-green);
+    font-weight: 600;
+    padding: 10px;
+}
+
+.section-checkout .outline-row-2 .dat-hang{
+    background-color: coral;
+    color: white;
+    font-size: 120%;
+    width: 130px;
+    padding: 10px;
+}
+
+

@@ -1,0 +1,888 @@
+<!-- 
+    Author Name     : Doan Kim Tuan
+    Author Email    : Doantuan21101999@hmail.com 
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mona</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/1fa75c7674.js" crossorigin="anonymous"></script>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+  <!--  Custom style -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/introducess.css">
+  <link rel="stylesheet" href="./css/knowledges.css">
+  <link rel="stylesheet" href="./css/checkout.css">
+  <link rel="stylesheet" href="./css/Store.css">
+  <link rel="stylesheet" href="./css/productDetail.css">
+
+  <!-- Jquery -->
+  <!-- Jquery -->
+  <script src="./js/jquery-341.min.js"></script>
+
+  
+  <style>
+    #beta-dropdown{
+      display: none;
+    }
+
+    .lala:hover #beta-dropdown{
+      display: block;
+    }
+
+    .cart-item .media{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ---------------------------------Navigation------------------------------ -->
+  <header id="navbar" class="flex-row">
+    <div class="logo">
+      <img src="./img/logo-new.png" alt="MonaLogo">
+    </div>
+    <nav>
+      <ul class="nav-items">
+        <li class="nav-link"><a class="home" href="#">trang chủ</a></li>
+        <li class="nav-link"><a href="#">giới thiệu</a></li>
+        <li class="nav-link">
+          <a href="#">cửa hàng</a>
+          <ul class="dropdown-menu">
+            <li class="item-sub-menu"><a href="#">Rau củ</a></li>
+            <li class="item-sub-menu"><a href="#">Trái cây</a></li>
+            <li class="item-sub-menu"><a href="#">đồ uống</a></li>
+            <li class="item-sub-menu"><a href="#">đồ khô</a></li>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="#">kiến thức</a></li>
+        <li class="nav-link"><a href="#">liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-icon">
+      <!-- open nav-icon class-->
+      <ul>
+        <li style="display: inline-block;"><i class="fas fa-search" id="search"></i></li>
+        <li style="display: inline-block;"><i class="fas fa-user" id="user"></i></li>
+        <li style="display: inline-block;" class="lala">
+
+          <i class="fas fa-shopping-cart" id="cart" ></i>
+          <div class="cart-body" id="beta-dropdown">
+            <div class="cart-item">
+              <div class="media">
+                <a class="pull-left" href="#"><img src="./img/product-1-470x470.jpg" alt=""></a>
+                <div class="media-body">
+                  <span class="cart-item-title">Sample Woman Top</span>
+                  <span class="cart-item-options">Size: XS; Colar: Navy</span>
+                  <span class="cart-item-amount">1*<span>$49.50</span></span>
+                </div>
+                <i class="far fa-times-circle"></i>
+              </div>
+            </div>
+
+            <div class="cart-caption">
+              <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">$34.55</span></div>
+              <div class="clearfix"></div>
+
+              <div class="center">
+                <div class="space10">&nbsp;</div>
+                <a href="checkout.html" class="beta-btn primary text-center">Đặt hàng <i
+                    class="fa fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+        </li>
+      </ul>
+    </div> <!-- finish nav-icon class-->
+  </header>
+  <!-- ----------------X----------------Navigation---------------X-------------- -->
+
+  <!-- ---------------------------------Form popup------------------------------ -->
+  <div class="popup" id="popup">
+    <div id="close"><i class="fas fa-times"></i></div>
+    <div class="form-popup" id="formLogin">
+      <form action="">
+        <div class="login-regis">
+          <h2>Đăng Nhập</h2>
+          <a href="#" id="register">Đăng ký</a>
+        </div>
+        <div class="input-group form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+          <input type="email" id="email" class="form-control" name="email" required autofocus>
+          <label for="username">Nhập địa chỉ Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label for="password">Nhập mật khẩu</label>
+          <!-- dieu huong dau nhay cho the input -->
+        </div>
+        <button type="submit">Đăng Nhập</button>
+        <p>Bạn quên mật khẩu?<a href="#">Quên mật khẩu</a></p>
+      </form>
+
+    </div>
+
+
+    <div class="register-popup" id="formRegister">
+      <form action="">
+        <div class="login-regis">
+          <h2>Đăng Ký</h2>
+          <a href="#" id="login">Đăng Nhập</a>
+        </div>
+        <div class="input-group">
+          <input type="text" id="email" required>
+          <label for="email">Nhập địa chỉ Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label for="password">Nhập mật khẩu</label>
+          <!-- dieu huong dau nhay cho the input -->
+        </div>
+        <div class="input-group">
+          <input type="text" id="fullName" required>
+          <label for="fullName">Nhập Họ Và Tên</label>
+          <!-- dieu huong dau nhay cho the input -->
+        </div>
+        <div class="input-group">
+          <input type="text" id="numberPhone" required>
+          <label for="numberPhone">Nhập số điện thoại</label>
+          <!-- dieu huong dau nhay cho the input -->
+        </div>
+        <button type="submit">Đăng Ký</button>
+      </form>
+    </div>
+
+
+  </div>
+
+  <!-- ----------------X----------------Form popup-----------X------------------ -->
+
+  <!-- ---------------------------------search popup------------------------------ -->
+
+  <div class="popup" id="search-popup">
+    <div id="close-search"><i class="fas fa-times"></i></div>
+    <div class="search_box">
+      <input type="text" placeholder="Bạn muốn tìm kiếm gì?">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+  <!-- ----------------X----------------search popup-----------X------------------ -->
+
+  <!-- ---------------------------------Slide------------------------------ -->
+  <section class="section">
+    <div class="carousel-container">
+      <!-- 1468*650 -->
+      <div class="carousel-slide fade">
+        <div class="roư">
+
+          <div class="carousel-content">
+            <h4 class="green">Content</h4>
+            <h2>100% tự nhiên</h2>
+            <p>Giảm giá khi đặt mua ngay hôm nay</p>
+            <a href="#" class="btn">mua ngay</a>
+          </div>
+
+          <div class="carousel-img">
+            <img src="./img/occho.png" alt="slide1">
+          </div>
+        </div>
+        <img src="./img/slider26.jpg" alt="SLide background 1">
+      </div>
+
+      <div class="carousel-slide fade">
+        <div class="roư">
+          <div class="carousel-content">
+            <h4 class="green">Content</h4>
+            <h2>100% tự nhiên</h2>
+            <p>Giảm giá khi đặt mua ngay hôm nay</p>
+            <a href="#" class="btn">mua ngay</a>
+          </div>
+          <div class="carousel-img">
+            <img src="./img/occho.png" alt="slide1">
+          </div>
+        </div>
+        <img src="./img/slider28.jpg" alt="SLide background 2">
+      </div>
+
+
+      <button class="prevBtn" onclick="plusSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="nextBtn" onclick="plusSlide(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ----------------X----------------slide--------------------X--------- -->
+
+  <!-- ---------------------------------Banner------------------------------ -->
+  <section class="section">
+    <div class="banner">
+      <div class="wrapper">
+        <div class="banner-img">
+          <div>
+            <a href="#"><img src="./img/banner36.jpg" alt="banner-1"></a>
+          </div>
+        </div>
+        <div class="banner-img">
+          <div>
+            <a href="#"><img src="./img/banner35.jpg" alt="banner-2"></a>
+          </div>
+        </div>
+        <div class="banner-img">
+          <div>
+            <a href="#"><img src="./img/banner34.jpg" alt="banner-3"></a>
+          </div>
+        </div>
+        <div class="banner-img">
+          <div>
+            <a href="#"><img src="./img/banner28.jpg" alt="banner-4"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ---------------X----------------Banner--------------------X--------- -->
+
+  <!-- ---------------------------------Featured products------------------------------ -->
+  <section class="section featured-products">
+    <div class="products-content">
+      <h1 class="text-center">Sản phẩm nổi bật</h1>
+      <div class="table-content">
+        <ul class="nav-content">
+          <li><a href="#tab-new" id="new">mới nhất</a></li>
+          <li><a href="#tab-discount" id="discount">giảm giá</a></li>
+          <li><a href="#tab-selling" id="selling">bán chạy</a></li>
+        </ul>
+
+        <div class="product" id="tab-new">
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#" class="img-re">
+                  <img src="./img/product-16-470x470.jpg" alt="new product 1">
+                </a>
+                <div class="shopping-cart-icon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
+              </div>
+            </div>
+            <div class="product-name">
+              <a href="#">Chanh leo</a>
+            </div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="tab-discount">
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-12-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name">
+              <a href="#">Chanh leo</a>
+            </div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="tab-selling">
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-21-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name">
+              <a href="#">Chanh leo</a>
+            </div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="product-img">
+              <div>
+                <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+              </div>
+              <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="product-name"><a href="#">Chanh leo</a></div>
+            <div class="product-prices">
+              <span>190,000</span>
+              <span>đ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ----------------X----------------Featured products---------X-------------------- -->
+
+  <!-- ---------------------------------Promotion------------------------------ -->
+
+  <section class="section promotion">
+    <div class="promotion-content">
+      <div class="container-content">
+        <h1 class="main-content">Khuyến Mãi Trong Tuần</h1>
+        <p class="sub-content">Cơ hội để gia đình bạn sở hữu những sản phẩm ưu đãi</p>
+        <div class="time-promotion">
+          <span>0
+            <strong>Giờ</strong>
+          </span>
+          <span>0
+            <strong>Phút</strong>
+          </span>
+          <span>0
+            <strong>Giây</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------X----------------Promotion---------X-------------------- -->
+
+  <!-- ---------------------------------Product Promotion------------------------------ -->
+  <section class="section product-promotion">
+    <div class="container">
+      <div class="owl-carousel">
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+        <div class="product-details img-promotion">
+          <div class="product-img">
+            <div>
+              <a href="#"><img src="./img/product-16-470x470.jpg" alt="new product 1"></a>
+            </div>
+            <div class="shopping-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+          <div class="product-name">
+            <a href="#">Chanh leo</a>
+          </div>
+          <div class="product-prices">
+            <span>190,000</span>
+            <span>đ</span>
+          </div>
+        </div>
+
+
+        <div class="owl-navigation">
+          <span class="owl-nav-prev"><i class="fas fa-chevron-left"></i></span>
+          <span class="owl-nav-next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ----------------X----------------Product Promotion-------------X---------------- -->
+
+  <!-- ------------------------------------advertisement--------------------------- -->
+  <section class="section advertisement">
+    <div class="advertisement-wrap">
+      <div class="maketing1">
+        <a href="#"><img src="./img/banner29.jpg" alt="banner-29"></a>
+      </div>
+      <div class="marketing2">
+        <a href="#"><img src="./img/banner30.jpg" alt="banner-30"></a>
+        <a href="#"></a>
+      </div>
+      <div class="marketing3">
+        <a href="#"><img src="./img/banner31.jpg" alt="banner-31"></a>
+        <a href="#"><img src="./img/banner32.jpg" alt="banner-32"></a>
+        <a href="#"><img src="./img/banner33.jpg" alt="banner-33"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------X----------------advertisement--------------X--------------- -->
+
+
+  <!-- ---------------------------------supplier------------------------------ -->
+  <section class="section supplier">
+    <div class="container">
+      <div class="owl-carousel">
+        <div class="item"><a href="#"><img src="./img/brand1.png" alt="supplier1"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand2.png" alt="supplier2"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand3.png" alt="supplier3"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand5.png" alt="supplier4"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand1.png" alt="supplier5"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand2.png" alt="supplier6"></a></div>
+        <div class="item"><a href="#"><img src="./img/brand3.png" alt="supplier7"></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------X----------------supplier--------------X--------------- -->
+
+  <!-- Footter -->
+  <div class="chen"></div>
+  <!-- /* --------------------- SECTION-3 -------------------- */ -->
+  <section class="section-3">
+    <div class="container">
+      <div class="text-3">
+        <h1>Đăng ký để nhận cập nhật</h1>
+        <p>Để lại email để không bỏ lỡ bất kì ưu đãi nào</p>
+      </div>
+      <div class="text-enter">
+        <input class="enter" type="text" placeholder="Email...">
+        <button>Đăng Ký</button>
+      </div>
+    </div>
+  </section>
+  <!-- /* --------------------- SECTION-4 -------------------- */ -->
+  <section class="section footer">
+    <div class="row-second">
+      <div class="col-1-of-4">
+        <a href="#"><img class="logo-footer" src="../public/img/logo-new.png" alt="Logo"></a>
+        <div class="icon-footer">
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 319 C16 Lý Thường Kiệt, Phường 15, Quận 11,<br>Tp.HCM</li>
+            <li><i class="fas fa-phone-square-alt"></i><a href="#" style="text-decoration: none;">076 922 0162</a></li>
+            <li><i class="fas fa-envelope-open-text"></i><a href="#" style="text-decoration: none;">mon@mona.media</a>
+            </li>
+            <li><i class="fab fa-skype"></i><a href="#" style="text-decoration: none;">demonhunterp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1-of-4">
+        <h3>MENU</h3>
+        <div class="link">
+          <ul>
+            <li class="footer-link"><a href="#" style="text-decoration: none;">Trang Chủ</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;">Giới thiệu</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;">Cửa hàng</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;">Kiến thức</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1-of-4">
+        <h3>SẢN PHẨM</h3>
+        <div class="link">
+          <ul>
+            <li class="footer-link"><a href="#" style="text-decoration: none;" ;>Rau củ</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;" ;>Trái Cây</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;" ;>Đồ Uống</a></li>
+            <li class="footer-link"><a href="#" style="text-decoration: none;" ;>Đồ Khô</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1-of-4">
+        <h3>INSTAGRAM</h3>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Jquery -->
+  <script src="./js/jquery-341.min.js"></script>
+
+
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+  <!-- owl carousel js -->
+  <script src="./js/owl.carousel.min.js"></script>
+  <!-- Custom js -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
