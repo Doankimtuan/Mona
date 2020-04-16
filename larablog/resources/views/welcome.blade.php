@@ -69,20 +69,20 @@
     <!-- ---------------------------------Navigation------------------------------ -->
     <header id="navbar" class="flex-row">
         <div class="logo">
-            <a href=""><img src="{{('/source/img/logo-new.png')}}" alt="MonaLogo"></a>
+            <a href="{{URL::to('/home')}}"><img src="{{('/source/img/logo-new.png')}}" alt="MonaLogo"></a>
             {{-- {{URL::to('/trang-chu')}} --}}
         </div>
         <nav>
             <ul class="nav-items">
-                <li class="nav-link"><a class="home" href="">trang chủ</a></li>
+                <li class="nav-link"><a class="home" href="{{URL::to('/home')}}">trang chủ</a></li>
                 {{-- {{URL::to('/trang-chu')}} --}}
-                <li class="nav-link"><a href="">giới thiệu</a></li>
+                <li class="nav-link"><a href="{{URL::to('/gioi-thieu')}}">giới thiệu</a></li>
                 {{-- {{URL::to('/gioi-thieu')}} --}}
                 <li class="nav-link">
-                    <a href="">cửa hàng</a>
+                    <a href="{{URL::to('/cua-hang')}}">cửa hàng</a>
                     {{-- {{URL::to('/cua-hang')}} --}}
                 </li>
-                <li class="nav-link"><a href="">kiến thức</a></li>
+                <li class="nav-link"><a href="{{URL::to('/kien-thuc')}}">kiến thức</a></li>
                 {{-- {{URL::to('/kien-thuc')}} --}}
                 <li class="nav-link"><a href="#">liên hệ</a></li>
             </ul>
@@ -95,15 +95,15 @@
 
                 @guest
                 <li style="display: inline-block;">
-                    <a href="{{ route('login') }}"><i class="fas fa-user" id="user">aaaaa</i></a>
+                    <a href="{{ route('login') }}"><i class="fas fa-user" id="user"></i></a>
                 </li>
                 @else
                 <li style="display: inline-block;">
                     <a href="#"><i class="fas fa-user" id="user">
-                            <div style="padding-left:5px">{{ Auth::user()->name }} </div>
+                            <div style="padding-left:5px; display:inline-block">{{ Auth::user()->name }} </div>
                         </i></a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -185,6 +185,8 @@
     <!-- ---------------------------------search popup------------------------------ -->
 
     @yield('content')
+    @yield('introduce')
+    @yield('store')
     {{-- @include('page.search')
                   <!-- ----------------X----------------search popup-----------X------------------ -->
                 

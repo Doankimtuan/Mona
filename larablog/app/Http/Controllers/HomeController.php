@@ -27,4 +27,18 @@ class HomeController extends Controller
         $products = DB::table('products')->limit('8')->get();
         return view('home', compact('products'));
     }
+
+    public function getIntroduce(){
+        return view('page.introduce');
+    }
+
+    public function getStore()
+    {
+        $products = DB::table('products')->limit('100')->get();
+        return view('page.store', compact('products'));
+    }
+    
+    public function getKnowledge(){
+        return view('page.knowledge');
+    }
 }

@@ -41,7 +41,7 @@
                 </li>
             @endif --}}
             <li style="display: inline-block;">
-                <a href="{{ route('login') }}"><i class="fas fa-user" id="user"></i></a>
+                <a href="{{ route('login') }}"><i class="fas fa-user" id="user">aaaaa</i></a>
             </li>
         @else
         <li style="display: inline-block;">
