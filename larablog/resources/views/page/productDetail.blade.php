@@ -6,7 +6,7 @@
     <div class="row">
         <div class="row-1">
             <div style="background-color: white;" class="col-1-of-2">
-                <img class="img" src="{{URL::to('public/source/img/'.$products->image)}}" alt="">
+                <img class="img" src="{{URL::to('/source/img/'.$products->image)}}" alt="">
             </div>
         </div>
 
@@ -24,10 +24,8 @@
                     {{$products->description}}
                 </p>
             </div>
-            <div class="number">
-                <button class="dau" style="width: 2rem" id="minus">-</button>
-                    <span id="qty">1</span>
-                    <button class="dau" style="width: 2rem" id="plus">+</button>
+            <div class="number">  
+                    <input type="number" id="qty" value="1" style="width: 80px; height:40px; font-size: 30px">
                 <input class="add" type="submit" value="THÊM VÀO GIỎ " style="color: white;">
             </div>
 
@@ -35,45 +33,31 @@
                 <div class="row-3">
                     <strong>Tính phí ship tự động</strong>
                     <div class="ship">
-                        <div class="grid-item"><img src="{{('public/source/img/GHN.jpg')}}" alt="GHN"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/tietkiem.jpg')}}" alt=""></div>
-                        <div class="grid-item"><img src="{{('public/source/img/ninja.jpg')}}" alt="ninja"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/shipchung.jpg')}}" alt="chung"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/viettle.jpg')}}" alt="viettel"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-vn-post.jpg')}}" alt="vn-post"></div>
+                        <div class="grid-item"><img src="{{('/source/img/GHN.jpg')}}" alt="GHN" style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/tietkiem.jpg')}}" alt=""style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/ninja.jpg')}}" alt="ninja"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/shipchung.jpg')}}" alt="chung"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/viettle.jpg')}}" alt="viettel"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-vn-post.jpg')}}" alt="vn-post"style="width:100px; height:50px"></div>
                     </div>
                 </div>
 
                 <div class="row-4">
                     <strong>Thanh Toán</strong>
                     <div class="ship">
-                        <div class="grid-item"><img src="{{('public/source/img/logo-acb.jpg')}}" alt="acb"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-techcombank.jpg')}}"
-                                alt="logo-techcombank"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-vib.jpg')}}" alt="logo-vib"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-vcb.jpg')}}" alt="logo-vcb"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-paypal.jpg')}}" alt="logo-paypal"></div>
-                        <div class="grid-item"><img src="{{('public/source/img/logo-mastercard.jpg')}}" alt="logo-mastercard">
+                        <div class="grid-item"><img src="{{('/source/img/logo-acb.jpg')}}" alt="acb"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-techcombank.jpg')}}"
+                                alt="logo-techcombank"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-vib.jpg')}}" alt="logo-vib"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-vcb.jpg')}}" alt="logo-vcb"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-paypal.jpg')}}" alt="logo-paypal"style="width:100px; height:50px"></div>
+                        <div class="grid-item"><img src="{{('/source/img/logo-mastercard.jpg')}}" alt="logo-mastercard"style="width:100px; height:50px">
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- <div class="end-section1">
-                <strong>"Hãy trở thành Affilicate của chúng tôi để tìm thêm thu nhập thụ động, kiếm tiền
-                    online"</strong>
-                <input class="btn-1" type="submit" value="Đăng ký Affilicate" style="color: white;">
-                <div class="danh-muc">
-                    <p>Danh mục: </p>
-                    <a href="#">Đồ khô</a>
-                    <p>,</p>
-                    <a href="#">Đồ uống</a>
-                    <p>,</p>
-                    <a href="#">Rau củ</a>
-                    <p>,</p>
-                    <a href="#">Trái cây</a>
-                </div>
-            </div> --}}
+
         </div>
     </div>
 </section>

@@ -29,7 +29,7 @@
             <div class="col-1-of-3">
                 <div class="row-1">
                     <div class="image">
-                        <img class="size-img" src="{{('public/source/img/banner34.jpg')}}" alt="Dau">
+                        <img class="size-img" src="{{('/source/img/banner34.jpg')}}" alt="Dau">
                     </div>
                     <div class="text-image">
                         <h3>New Features</h3>
@@ -41,7 +41,7 @@
 
                 <div class="row-1">
                     <div class="image">
-                        <img class="size-img" src="{{('public/source/img/banner34.jpg')}}" alt="Nho">
+                        <img class="size-img" src="{{('/source/img/banner34.jpg')}}" alt="Nho">
                     </div>
                     <div class="text-image">
                         <h3>Responsive</h3>
@@ -55,7 +55,7 @@
 
             <div class="col-2-of-3">
                 <div class="row-2">
-                    <img class="ly" src="{{('public/source/img/banner34.jpg')}}" alt="ly-trai-cay">
+                    <img class="ly" src="{{('/source/img/banner34.jpg')}}" alt="ly-trai-cay">
                 </div>
 
             </div>
@@ -63,7 +63,7 @@
             <div class="col-1-of-3">
                 <div class="row-1">
                     <div class="image">
-                        <img class="size-img" src="{{('public/source/img/banner34.jpg')}}" alt="Cam">
+                        <img class="size-img" src="{{('/source/img/banner34.jpg')}}" alt="Cam">
                     </div>
                     <div class="text-image">
                         <h3>Unlimited Options</h3>
@@ -75,7 +75,7 @@
 
                 <div class="row-1">
                     <div class="image">
-                        <img class="size-img" src="{{('public/source/img/banner34.jpg')}}" alt="Occho">
+                        <img class="size-img" src="{{('/source/img/banner34.jpg')}}" alt="Occho">
                     </div>
                     <div class="text-image">
                         <h3>Customize Anything</h3>

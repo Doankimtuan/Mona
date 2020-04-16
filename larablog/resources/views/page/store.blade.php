@@ -128,7 +128,7 @@
         <div class="item-new">
               <div>
                 <a href="{{URL::to('/chi-tiet-san-pham/'.$prd->id)}}"><img class="img-news"
-                    src="{{URL::to('public/source/img/'.$prd->image)}}" alt="news">
+                    src="{{URL::to('/source/img/'.$prd->image)}}" alt="news">
                 </a>
               </div>
             <div class="title-new">

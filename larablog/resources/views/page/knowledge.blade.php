@@ -49,7 +49,7 @@
         <div class="item-new">
               <div>
                 <a href="#"><img class="img-news"
-                    src="{{('public/source/img/menu-products3.jpg')}}" alt="news">
+                    src="{{('/source/img/menu-products3.jpg')}}" alt="news">
                 </a>
               </div>
             <div class="title-new">
@@ -63,7 +63,7 @@
         <div class="item-new">
 
             <div>
-              <a href="#"><img class="img-news" src="{{('public/source/img/59406586_277022679721039_6026262764271054419_n.jpg')}}"
+              <a href="#"><img class="img-news" src="{{('/source/img/59406586_277022679721039_6026262764271054419_n.jpg')}}"
                   alt="news"></a>
             </div>
             <div class="title-new">
@@ -79,7 +79,7 @@
 
             <div>
               <a href="#"><img class="img-news" 
-                src="{{('public/source/img/59204060_1515395398594811_7413836574650687457_n.jpg')}}"alt="news"></a>
+                src="{{('/source/img/59204060_1515395398594811_7413836574650687457_n.jpg')}}"alt="news"></a>
             </div>
             <div class="title-new">
               <a href="#">Chả cốm ăn với gì ngon </a>
@@ -94,7 +94,7 @@
 
             <div>
               <a href="#"><img class="img-news" 
-                src="{{('public/source/img/banner-menu-post2.jpg')}}"alt="news"></a>
+                src="{{('/source/img/banner-menu-post2.jpg')}}"alt="news"></a>
             </div>
             <div class="title-new">
               <a href="#">Cách làm măng tây xào tỏi </a>
@@ -110,7 +110,7 @@
 
             <div>
               <a href="#"><img class="img-news" 
-                src="{{('')}}/public/imgs/menu-products.jpg"alt="news"></a>
+                src="{{('')}}//imgs/menu-products.jpg"alt="news"></a>
             </div>
             <div class="title-new">
               <a href="#">Súp lơ xanh nấu món gì ngon? </a>
@@ -125,7 +125,7 @@
 
             <div>
               <a href="#"><img class="img-news" 
-                src="{{('')}}/public/imgs/58468658_280503129504778_6033469487363831565_n.jpg"alt="news"></a>
+                src="{{('')}}//imgs/58468658_280503129504778_6033469487363831565_n.jpg"alt="news"></a>
             </div>
             <div class="title-new">
               <a href="#">Yến mạch là gì </a>

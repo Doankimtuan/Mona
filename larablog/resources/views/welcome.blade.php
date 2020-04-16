@@ -120,83 +120,63 @@
                     <i class="fas fa-shopping-cart" id="cart" onclick="shopCart()"></i>
                     <div class="cart-body" id="beta-dropdown" style="width:20%;">
                         <div id="change-item-cart">
-                            {{-- @if(Session::has("Cart") != null) --}}
+                            @if(Session::has("Cart") != null) 
                             {{-- open cart-item --}}
                             <div class="cart-item">
-                                {{-- <table style="width: 100%">
-                      @foreach (Session::get('Cart')->products as $item)
-                      <tr>
-                        <th>
-                          <div class="media">
-                            <a class="pull-left" href="#"><img
-                                src="{{URL::to('/source/img/'.$item['productInfo']->image)}}" alt=""
-                                style="display: inline-block"></a>
-                                <div class="media-body">
-                                    <span class="cart-item-title">{{$item['productInfo']->name}}</span>
-                                    <span class="cart-item-amount">{{$item['qty']}}*<span>{{number_format($item['productInfo']->price)}}
-                                            đ</span></span>
-                                </div>
-                                <i class="far fa-times-circle remove" data-id="{{$item['productInfo']->id}}"></i>
+                                <table style="width: 100%">
+                                    @foreach (Session::get('Cart')->products as $item)
+                                    <tr>
+                                        <th>
+                                            <div class="media">
+                                                <a class="pull-left" href="#"><img
+                                                        src="{{URL::to('/source/img/'.$item['productInfo']->image)}}"
+                                                        alt="" style="display: inline-block"></a>
+                                                <div class="media-body">
+                                                    <span class="cart-item-title">{{$item['productInfo']->name}}</span>
+                                                    <span class="cart-item-amount">{{$item['qty']}}*<span>{{number_format($item['productInfo']->price)}}
+                                                            đ</span></span>
+                                                </div>
+                                                <i class="far fa-times-circle remove"
+                                                    data-id="{{$item['productInfo']->id}}"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    @endforeach
+                                </table>
+
                             </div>
-                            </th>
-                            </tr>
-                            @endforeach
-                            </table> --}}
+                            {{-- close cart-item  --}}
+                            {{-- open cart-caption --}}
+                            <div class="cart-caption">
+                                <div class="cart-total text-right">Tổng tiền: <span
+                                        class="cart-total-value">{{number_format(Session::get('Cart')->totalPrice)}}
+                                        đ</span></div>
 
+                                <div class="clearfix"></div>
+                                @endif
+                            </div>
+                            {{-- close cart-caption  --}}
+                            <div class="center">
+                                <div class="space10">&nbsp;</div>
+                                <a href="{{URL::to('/thanh-toan')}}" class="beta-btn primary text-center">Đặt hàng <i
+                                        class="fa fa-chevron-right"></i></a>
+                                {{-- {{URL::to('/thanh-toan')}} --}}
+                            </div>
                         </div>
-                        {{-- close cart-item  --}}
-                        {{-- open cart-caption --}}
-                        <div class="cart-caption">
-                            <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value"> đ</span></div>
-                            {{-- {{number_format(Session::get('Cart')->totalPrice)}} --}}
-                            <div class="clearfix"></div>
-                            {{-- @endif --}}
-                        </div>
-                        {{-- close cart-caption  --}}
-                        <div class="center">
-                            <div class="space10">&nbsp;</div>
-                            <a href="" class="beta-btn primary text-center">Đặt hàng <i
-                                    class="fa fa-chevron-right"></i></a>
-                            {{-- {{URL::to('/thanh-toan')}} --}}
-                        </div>
+
                     </div>
-
-        </div>
-        </li>
-        </ul>
+                </li>
+            </ul>
         </div> <!-- finish nav-icon class-->
     </header>
-    <!-- ----------------X----------------Navigation---------------X-------------- -->
-
-    <!-- ---------------------------------Form popup------------------------------ -->
-    {{-- <div class="popup" id="popup">
-                    <div id="close"><i class="fas fa-times"></i></div>
-                
-                
-                    @include('page.login')
-                    @include('page.register')
-                
-                
-                  </div> --}}
-
-
-    <!-- ----------------X----------------Form popup-----------X------------------ -->
-
-    <!-- ---------------------------------search popup------------------------------ -->
+    
 
     @yield('content')
     @yield('introduce')
     @yield('store')
-    {{-- @include('page.search')
-                  <!-- ----------------X----------------search popup-----------X------------------ -->
-                
-                  @yield('home')
-                
-                  @yield('knowledge')
-                  @yield('introduce')
-                  @yield('checkout')
-                  @yield('store')
-                  @yield('productDetail') --}}
+    @yield('knowledge')
+    @yield('productDetail')
+   
 
 
     <!-- Footter -->

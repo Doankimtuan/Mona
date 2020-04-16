@@ -19,4 +19,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/gioi-thieu', 'HomeController@getIntroduce');
 Route::get('/cua-hang', 'HomeController@getStore');
 Route::get('/kien-thuc', 'HomeController@getKnowledge');
+Route::get('/chi-tiet-san-pham/{id}', 'HomeController@getDetail');
 
+Route::get('/Add-Cart/{id}', 'HomeController@AddCart');
+Route::get('/Delete-Item-Cart/{id}', 'HomeController@DeleteItemCart');
