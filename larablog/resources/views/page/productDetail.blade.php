@@ -25,10 +25,10 @@
                 </p>
             </div>
             <form action="{{URL::to('/save-cart')}}" method="POST" class="number">  
-                {{csrf_field()}}
-                    <input type="number" name="qty" id="qty" value="1" style="width: 80px; height:40px; font-size: 30px">
-                    <input type="productid_hidden" type="text" value="{{$products->id}}" style="display:none">
-                <input class="add" type="submit" value="THÊM VÀO GIỎ " style="color: white;">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="number" name="qty" id="qty" value="1" min='1' max='20' style="width: 80px; height:40px; font-size: 30px">
+                    <input name="productid_hidden" type="text" value="{{$products->id}}" style="display:none">
+                    <input class="add" type="submit" value="THÊM VÀO GIỎ " onclick="SaveCart()" style="color: white;">
             </form>
 
             {{-- <div class="row-delivery">

@@ -30,10 +30,13 @@
     <link rel="stylesheet" href="{{asset('/source/css/checkout.css')}}">
     <link rel="stylesheet" href="{{asset('/source/css/Store.css')}}">
     <link rel="stylesheet" href="{{asset('/source/css/productDetails.css')}}">
+    <link rel="stylesheet" href="{{asset('/source/css/contactx.css')}}">
 
 
     <!-- Jquery -->
     <script src="{{asset('/source/js/jquery-350.min.js')}}"></script>
+    <!-- owl carousel js -->
+    <script src="{{asset('/source/js/owl.carousel.min.js')}}"></script>
 
     <style>
         #beta-dropdown {
@@ -93,7 +96,7 @@
                 </li>
                 <li class="nav-link"><a href="{{URL::to('/kien-thuc')}}">kiến thức</a></li>
                 {{-- {{URL::to('/kien-thuc')}} --}}
-                <li class="nav-link"><a href="#">liên hệ</a></li>
+                <li class="nav-link"><a href="{{URL::to('/lien-lac')}}">liên hệ</a></li>
             </ul>
         </nav>
 
@@ -165,12 +168,21 @@
                                 @endif
                             </div>
                             {{-- close cart-caption  --}}
+                            @if(Auth::check())
                             <div class="center">
                                 <div class="space10">&nbsp;</div>
                                 <a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i
                                         class="fa fa-chevron-right"></i></a>
                                 {{-- {{URL::to('/thanh-toan')}} --}}
                             </div>
+                            @else
+                            <div class="center">
+                                <div class="space10">&nbsp;</div>
+                                <a href="{{route('login')}}" class="beta-btn primary text-center">Đặt hàng <i
+                                        class="fa fa-chevron-right"></i></a>
+                                {{-- {{URL::to('/thanh-toan')}} --}}
+                            </div>
+                            @endif
                         </div>
                         
                     </div>
@@ -186,6 +198,7 @@
     @yield('knowledge')
     @yield('productDetail')
     @yield('checkout')
+    @yield('contact')
    
     @include('page.search')
 
@@ -193,6 +206,7 @@
 
 
 
+    @include('page.footer')
 
 
 
@@ -200,9 +214,7 @@
 
 
 
-
-    <!-- owl carousel js -->
-    <script src="{{asset('/source/js/owl.carousel.min.js')}}"></script>
+    
 
 
 
@@ -221,8 +233,9 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Custom js -->
-    <script src="{{asset('/source/js/mains.js')}}"></script>
+    
     <script src="{{asset('/source/js/product.js')}}"></script>
+    <script src="{{asset('/source/js/main.js')}}"></script>
 
     <script>
         $('#change-item-cart table tr th .media').on("click", ".remove", function () {
@@ -235,6 +248,19 @@
 
         function AddCart(id) {
             url = 'Add-Cart/' + id;
+            axios.get(url).then(function (res) {
+                renderCart(res);
+                alertify.success('Đặt hàng thành công');
+            })
+        }
+
+        $('#tab-discount').on("click", "#tab-discoun", function (){
+            url = 'discount';
+            
+        })
+
+        function SaveCart() {
+            url = 'save-cart';
             axios.get(url).then(function (res) {
                 renderCart(res);
                 alertify.success('Đặt hàng thành công');

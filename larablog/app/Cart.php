@@ -16,14 +16,14 @@ class Cart
 		}
 	}
 
-	public function add($product, $id){
+	public function add($product, $id, $quaty){
 		$newProduct = array('qty' => 0, 'price' => $product->price, 'productInfo' => $product);
 		if($this->products){
 			if(array_key_exists($id, $this->products)){
 				$newProduct = $this->products[$id];
 			}
 		}
-		$newProduct['qty']++;
+		$newProduct['qty'] = $newProduct['qty'] + $quaty;
 		$newProduct['price'] = $product->price * $newProduct['qty'];
 		$this->products[$id] = $newProduct;
 		$this->totalQty++;

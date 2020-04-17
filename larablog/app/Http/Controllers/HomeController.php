@@ -54,6 +54,10 @@ class HomeController extends Controller
         return view('page.productDetail',  compact('products'));
     }
 
+    public function getContact(){
+        return view('page.contact');
+    }
+
 
     public function AddCart($id)
     {
@@ -63,7 +67,7 @@ class HomeController extends Controller
 
             $oldCart = session('Cart') ? session('Cart') : null;
             $newCart = new Cart($oldCart);
-            $newCart->add($product, $id);
+            $newCart->add($product, $id, 1);
             session(['Cart' => $newCart]);
             $cart = session('Cart');
         }
@@ -137,10 +141,23 @@ class HomeController extends Controller
         $productID = $req->productid_hidden;
         $qty = $req->qty;
 
-        // $data = DB::table('products')->where('id', $productID)->first();
+        $data = DB::table('products')->where('id', $productID)->first();
 
-        echo '<pre>';
-        print_r($productID);
-        echo '<pre>';
+        if ($data != null) {
+
+            $oldCart = session('Cart') ? session('Cart') : null;
+            $newCart = new Cart($oldCart);
+            $newCart->add($data, $productID, $qty);
+            session(['Cart' => $newCart]);
+            $cart = session('Cart');
+        }
+        return view('page.cart', compact('cart'));
+    }
+
+
+
+    // Admin
+    public function getAdmin(){
+        return view('page.store');
     }
 }

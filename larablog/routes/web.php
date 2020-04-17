@@ -19,6 +19,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/gioi-thieu', 'HomeController@getIntroduce');
 Route::get('/cua-hang', 'HomeController@getStore');
 Route::get('/kien-thuc', 'HomeController@getKnowledge');
+Route::get('/lien-lac', 'HomeController@getContact');
 Route::get('/chi-tiet-san-pham/{id}', 'HomeController@getDetail');
 
 Route::get('/Add-Cart/{id}', 'HomeController@AddCart');
@@ -36,3 +37,9 @@ Route::post('/dat-hang', [
 Route::post('/save-cart', 'HomeController@save_cart');
 
 Route::get('search', 'HomeController@search')->name('search');
+
+
+Route::get('/admin', [
+    'as' => 'admin',
+    'uses' => 'HomeController@hetAdmin'
+]);

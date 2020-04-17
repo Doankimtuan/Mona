@@ -186,12 +186,14 @@
       <div class="owl-carousel">
 
         @foreach ($products as $prd)
-        <div class="product-details img-promotion">
+        <div class="product-details">
           <div class="product-img">
             <div>
-              <a href="#"><img src="{{URL::to('/source/img/'.$prd->image)}}" alt="new product 1"></a>
+              <a href="{{URL::to('/chi-tiet-san-pham/'.$prd->id)}}" class="img-re">
+                <img src="{{URL::to('/source/img/chanh.jpg')}}" alt="new product">
+              </a>
+            <div class="shopping-cart-icon"><a onclick="AddCart({{$prd->id}})" href="javascrip:"><i class="fas fa-shopping-cart"></i></a></div>
             </div>
-            <div class="shopping-cart-icon"><a onclick="AddCart({{$prd->id}})" href="javascrip:"><i class="fas fa-shopping-cart"></a></i></div>
           </div>
           <div class="product-name">
             <a href="#">{{$prd->name}}</a>
