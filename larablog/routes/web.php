@@ -14,32 +14,35 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'HomeController@index');
-Route::get('/gioi-thieu', 'HomeController@getIntroduce');
-Route::get('/cua-hang', 'HomeController@getStore');
-Route::get('/kien-thuc', 'HomeController@getKnowledge');
-Route::get('/lien-lac', 'HomeController@getContact');
-Route::get('/chi-tiet-san-pham/{id}', 'HomeController@getDetail');
+Route::get('/', 'PageController@index');
+Route::get('/gioi-thieu', 'PageController@getIntroduce');
+Route::get('/cua-hang', 'PageController@getStore');
+Route::get('/kien-thuc', 'PageController@getKnowledge');
+Route::get('/lien-lac', 'PageController@getContact');
+Route::get('/chi-tiet-san-pham/{id}', 'PageController@getDetail');
 
-Route::get('/Add-Cart/{id}', 'HomeController@AddCart');
-Route::get('/Delete-Item-Cart/{id}', 'HomeController@DeleteItemCart');
+Route::get('/Add-Cart/{id}', 'PageController@AddCart');
+Route::get('/Delete-Item-Cart/{id}', 'PageController@DeleteItemCart');
 Route::get('/dat-hang', [
     'as' => 'dathang',
-    'uses' => 'HomeController@getCheckOut'
+    'uses' => 'PageController@getCheckOut'
 ]);
 //vao controler thuc hien ham postCheckOut
 Route::post('/dat-hang', [
     'as' => 'dathang',
-    'uses' => 'HomeController@postCheckOut'
+    'uses' => 'PageController@postCheckOut'
 ]);
 
-Route::post('/save-cart', 'HomeController@save_cart');
+Route::post('/save-cart', 'PageController@save_cart');
 
-Route::get('search', 'HomeController@search')->name('search');
+Route::get('search', 'PageController@search')->name('search');
 
 
 Route::get('/admin', [
     'as' => 'admin',
-    'uses' => 'HomeController@hetAdmin'
+    'uses' => 'HomeController@index'
 ]);
+
+Auth::routes();
+
+Route::get('/home', 'PageController@index')->name('home');
